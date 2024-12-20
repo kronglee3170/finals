@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="join_us.css" rel="stylesheet" />
+    <title>Cosmic Fitness - Join Us</title>
+	<script>
+	function doClear()
+	{
+		document.JoinUs.customer.value="";
+		document.JoinUs.address.value="";
+		document.JoinUs.city.value="";
+		document.JoinUs.state.value="";
+		document.JoinUs.zip.value="";
+		document.JoinUs.phone.value="";
+		
+		document.JoinUs.plan[0].checked=false;
+		document.JoinUs.plan[1].checked=false;
+		document.JoinUs.plan[2].checked=false;
+		return;
+	}
+
+	function doSubmit()
+	{
+		if (validateText() == false)
+		{
+		alert("Required data is missing");
+		return;
+		}
+		if (validateRadio() == false)
+		{
+		alert("Please select a plan");
+		return;
+		}
+		alert("Your application form has been submitted.");
+		return;
+	}
+	
+	function validateText()
+	{
+		var customer = document.JoinUs.customer.value;
+		if(customer.length == 0) return false;
+		var address = document.JoinUs.address.value;
+		if(address.length == 0) return false;
+		var city = document.JoinUs.city.value;
+		if(city.length == 0) return false;
+		var zip = document.JoinUs.zip.value;
+		if(zip.length == 0) return false;
+		var phone = document.JoinUs.phone.value;
+		if(phone.length == 0) return false;
+		return true;
+	}
+
+	function validateRadio()
+	{
+		if (document.JoinUs.plan[0].checked) return true;
+		if (document.JoinUs.plan[1].checked) return true;
+		if (document.JoinUs.plan[2].checked) return true;
+		return false;
+	}
+	</script>
+</head>
+
+<body>
+	<header>
+		<h1>Join Us!</h1>
+	<nav class="horizontalNavigation">
+        <a href="about_us.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="membership.html">Membership</a>
+    </nav>
+	</header>
+
+	<main>
+	<form name="JoinUs">
+		<h1>Membership Application Form</h1>
+		<div class="form">
+			<label>Name</label>
+			<input name="customer" size="50" type="text">
+		</div>
+		
+		<div class="form">
+			<label>Address</label>
+			<input name="address" size="50" type="text">
+		</div>
+		
+		<div class="form">
+			<label>City</label>
+			<input name="city" size="50" type="text">
+		</div>
+		
+		<div class="form">
+			<label>State</label>
+			<input name="state" size="50" type="text">
+		</div>
+		
+		<div class="form">
+			<label>Zip</label>
+			<input name="zip" size="50" type="text">
+		</div>
+	
+		<div class="form">
+			<label>Phone</label>
+			<input name="phone" size="50" type="text">
+		</div>
+
+		<h3>Membership Plans:</h3>
+	
+		<div class="form-radio">
+			<input name="plan" type="radio" value="hydra">Hydra
+		</div>
+		<div class="form-radio">
+			<input name="plan" type="radio" value="decepticon">Decepticon
+		</div>
+		<div class="form-radio">
+			<input name="plan" type="radio" value="vought">Vought
+		</div>
+		
+
+		<input type="button" value="Submit" onClick="doSubmit()">
+		<input type="button" value="Clear" onClick="doClear()">
+	</form>
+	</main>
+ <footer>
+        <p>&copy; 1946 Cosmic Fitness. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

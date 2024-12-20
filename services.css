@@ -1,0 +1,77 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+/* General Styles for Services Page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #D3D3D3;
+	background-size: cover;
+    color: #333;
+	line-height: 1.6;
+}
+
+header {
+    background-color: #0047AB;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1 {
+    font-size: 4rem;
+}
+
+nav {
+    background-color: #D92121;
+    padding: 1rem 0; 
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 2rem; 
+    font-size: 1.5rem; 
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #A8A9AD; 
+    text-decoration: underline;
+}
+
+.services {
+    padding: 20px;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: start;
+}
+
+.service-item {
+    max-width: 200px;
+    text-align: center;
+}
+
+.service-image {
+    width: 150%;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #B11226;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+

@@ -1,0 +1,127 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+/* General Page Styles */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+	background-color: #a6a4d8;
+    color: #333;
+    display: flex;
+	flex-direction: column;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #b52c37;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1 {
+    font-size: 4rem;
+}
+
+nav {
+    background-color: #5242a5;
+    padding: 1rem 0; 
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 2rem; 
+    font-size: 1.5rem; 
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #b52c37; 
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+form {
+    border-radius: 8px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+	margin: center;
+}
+
+form h1 {
+    text-align: center;
+    color: #b52c37;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.form {
+    margin-bottom: 1rem;
+}
+
+.form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #b52c37;
+}
+
+.form input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form h3, form-radio {
+	color: #b52c37;
+}
+
+.form-radio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.form-radio input[type="radio"] {
+    margin: center;
+}
+
+form input[type="button"] {
+    width: 48%;
+    padding: 0.8rem;
+    margin: 0.5rem 1%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    background-color: #ce402c;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="button"]:hover {
+    background-color: #ce402c;
+}
+
+footer {
+    background-color: #5242a5;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+}
